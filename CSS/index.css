@@ -1,0 +1,307 @@
+@font-face {
+    font-family: segoe;
+    src: url(../font/segoepr.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "segoe", sans-serif;
+    font-size: 16px;
+}
+
+/* ----- Parts of page ---- */
+/* Welcome section ------------------------------------------------------------------------------------------------*/
+
+#welcome {
+    height: 100vh;
+    background-image: url(../Képek/bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3rem;
+   
+}
+.box {
+    width: 80%;
+}
+#welcome h1 {
+    font-size: 2.6rem;
+    color: #f5f1ed;
+    animation: textcolor 4s ease-in-out;
+    letter-spacing: 0.2rem;
+
+}
+#welcome h3 {
+    color: #fcfffd;
+    font-size: 1.6rem;
+}
+#welcome p {
+    color: #fcfffd;
+    font-size: 1rem;
+
+}
+@keyframes textcolor {
+    from {color: transparent;}
+    to {color: #f5f1ed;}
+}
+
+/*------ Mouse scroll ------*/
+.scrollicon {
+    position: absolute;
+    bottom: 5%;
+}
+.scroll-downs {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin-top: 10rem;
+}
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+ @keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
+
+/* Welcome section END --------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* Project section--------------------------------------------------------------------------------------------- */
+
+#projects {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 3rem;
+}
+.project-title {
+    letter-spacing: 0.5rem;
+    margin: 1rem;
+    font-size: 2.4rem;
+}
+.project-text {
+    letter-spacing: 0.3rem;
+    margin-bottom: 4rem;
+    font-size: 1.4rem;
+}
+.container {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fill,minmax(30%, 30rem));
+    justify-content: center;
+    justify-items: center;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    
+}
+.project {
+    width: 80%;
+    min-width: 100%;
+    background-color: rgba(255, 227, 194, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    backdrop-filter: contrast(70%);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+.project:hover {
+    transform: scale(110%);
+    transition: 1s;
+}
+.card-img {
+    height: 80%;
+}
+.project img {
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 2%;
+}
+.card-text {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    letter-spacing: 0.3rem;
+    padding: 5%;
+    
+}
+.card-text h3 {
+    font-size: 1.2rem;
+}
+.icon {
+    margin-right: 1rem;
+    color: black;
+    animation-name: icon;
+    animation-duration: 1.7s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+@keyframes icon {
+    0% { opacity: 0; }
+    10% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(10px); opacity: 0;}
+}
+
+/* Project section END--------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* About section--------------------------------------------------------------------------------------------- */
+#about {
+    height: 100%;
+    padding: 3rem;
+}
+#about h3 {
+    text-align: center;
+    letter-spacing: 0.4rem;
+    font-size: 2.4rem;
+    margin-bottom: 5rem;
+}
+#about .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    justify-items: center;
+    gap: 2rem;
+}
+#about .container img {
+    border-radius: 1.4rem;
+    width: 80%;
+    max-width: 25rem;
+    min-width: 10rem; 
+    margin-bottom: 1.6rem;
+    filter: blur(10px);
+}
+#about .container img:hover {
+    filter: blur(0px);
+    transform: 3s;
+}
+#about h2 {
+    letter-spacing: 0.4rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+#about p {
+    color: black;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.skills h4 {
+    text-align: center;
+    letter-spacing: 0.4rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.skills .mycontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem;
+    padding: 2rem;
+}
+.skills .mycontainer img {
+    width: 15rem;
+    padding: 2rem;
+}
+.skills .mycontainer img:hover {
+    transform: scale(110%);
+    transition: 1s;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* About section END--------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* Footer--------------------------------------------------------------------------------------------- */
+
+footer {
+    position: relative; 
+    left: 0 ; right: 0; bottom: 0; top: 100%;
+    width: 100%;
+    height: 16rem;
+    backdrop-filter: blur(17px) saturate(100%);
+    -webkit-backdrop-filter: blur(17px) saturate(100%);
+    background-color: rgba(0, 0, 0, 0.837);
+}
+footer h3 {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    letter-spacing: .3rem;
+}
+footer h5 {
+    text-align: center;
+    color: whitesmoke;
+    padding: 0.5rem;
+}
+.contact-icons {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contact-icons i{
+    font-size: 2rem;
+    color: white;
+}
+.contact-icons li {
+    padding: 1rem;
+}
+.contact-icons i:hover {
+    transform: scale(120%);
+    transition: .7s ease-in-out;
+    color: antiquewhite;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* Footer END --------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 576px)
+{
+    html {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 300px)
+{
+    html {
+        font-size: 8px;
+    }
+}
